@@ -4,7 +4,6 @@
 
 ```
 ├── README.md
-├── app.log
 ├── go.mod
 ├── go.sum
 ├── main.go
@@ -16,10 +15,8 @@
     │   ├── auth_test.go
     │   ├── endpoints.go -- Actual API endpoints and wraps their responses
     │   ├── endpoints_test.go
-    │   ├── helper.go -- Used for parsing dateTime strings in json
     │   ├── net.go -- Configuration and credential loading
     │   ├── net_test.go
-    │   ├── rate.go -- Unused rate limiter
     │   ├── response_types.go -- JSON structs of responses
     │   └── types.go -- Other types used in this implementation
     ├── cli
@@ -59,7 +56,7 @@ go run main.go
 #### Example 2
 
 ```bash
-go run main.go --side buy twap --duration "1m" --interval "5s" --amount "100" --market "AVAX-USDC"
+go run main.go --side buy twap --duration "1m" --interval "5s" --amount "100" --market "AVAX-USDC" --api-key="<YOUR_KEY>" --api-secret="<YOUR_SECRET>"
 ```
 
 ### CLI
